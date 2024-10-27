@@ -1,7 +1,6 @@
 package entities;
 
 public class Transformations {
-    
    
    public static Vector translate2D(Vector vector, double dx, double dy) {
     double[] translationMatrixElements = {

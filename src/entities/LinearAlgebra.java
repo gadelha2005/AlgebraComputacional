@@ -91,10 +91,6 @@ package entities;
         } 
 
         public static Matrix dot(Matrix a , Matrix b){
-            if(a.getColumns() != b.getRows()){
-                System.out.println("O número de colunas é diferente de linhas.");
-            }
-
             int rows = a.getRows();
             int columns = b.getColumns();
             int communDimension = a.getColumns();
