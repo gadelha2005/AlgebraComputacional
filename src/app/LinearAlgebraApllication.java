@@ -24,7 +24,7 @@ public class LinearAlgebraApllication {
         System.out.println();
 
         // Transposição de vetores
-        int[] vectorElements = {10 , 20 , 30 , 40};
+        double[] vectorElements = {10 , 20 , 30 , 40};
         Vector vector = new Vector(4, vectorElements);
         System.out.println("Vetor normal: ");
         vector.printVector();
@@ -48,8 +48,8 @@ public class LinearAlgebraApllication {
         System.out.println();
 
         // Soma de vetores
-        int[] elements3 = {20 , 40 , 60};
-        int[] elements4 = {100 , 200 , 300};
+        double[] elements3 = {20 , 40 , 60};
+        double[] elements4 = {100 , 200 , 300};
         Vector vector2 = new Vector(3, elements3);
         Vector vector3 = new Vector(3, elements4);
 
@@ -72,8 +72,8 @@ public class LinearAlgebraApllication {
         System.out.println();
 
         // Multiplicação de vetores
-        int[] elements7 = {5 , 10 , 20};
-        int[] elements8 = {10 , 20 , 30};
+        double[] elements7 = {5 , 10 , 20};
+        double[] elements8 = {10 , 20 , 30};
         Vector vector4 = new Vector(3, elements7);
         Vector vector5 = new Vector(3, elements8);
 

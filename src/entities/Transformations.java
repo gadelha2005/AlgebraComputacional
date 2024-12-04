@@ -19,7 +19,7 @@ public class Transformations {
     Matrix vectorHomogeneous = new Matrix(3, 1, vectorHomogeneousElements);
 
     Matrix result = LinearAlgebra.dot(translationMatrix, vectorHomogeneous);
-    int[] resultCartesian = {(int) result.get(0, 0), (int) result.get(1, 0)};
+    double[] resultCartesian = {(int) result.get(0, 0), (int) result.get(1, 0)};
 
     return new Vector(2, resultCartesian);
 }
@@ -43,7 +43,7 @@ public class Transformations {
         Matrix vectorHomogeneous = new Matrix(4, 1, vectorHomogeneousElements);
 
         Matrix result = LinearAlgebra.dot(translationMatrix, vectorHomogeneous);
-        int[] resultCartesian = {(int) result.get(0, 0), (int) result.get(1, 0), (int) result.get(2, 0)};
+        double[] resultCartesian = {(int) result.get(0, 0), (int) result.get(1, 0), (int) result.get(2, 0)};
 
         return new Vector(3, resultCartesian);
     }
@@ -67,7 +67,7 @@ public class Transformations {
         Matrix vectorHomogeneous = new Matrix(3, 1, vectorHomogeneousElements);
 
         Matrix result = LinearAlgebra.dot(rotationMatrix, vectorHomogeneous);
-        int[] resultCartesian = {(int) result.get(0, 0), (int) result.get(1, 0)};
+        double[] resultCartesian = {(int) result.get(0, 0), (int) result.get(1, 0)};
 
         return new Vector(2, resultCartesian);
     }
@@ -92,7 +92,7 @@ public class Transformations {
         Matrix vectorHomogeneous = new Matrix(4, 1, vectorHomogeneousElements);
 
         Matrix result = LinearAlgebra.dot(rotationMatrix, vectorHomogeneous);
-        int[] resultCartesian = {(int) result.get(0, 0), (int) result.get(1, 0), (int) result.get(2, 0)};
+        double[] resultCartesian = {(int) result.get(0, 0), (int) result.get(1, 0), (int) result.get(2, 0)};
 
         return new Vector(3, resultCartesian);
     }
@@ -117,7 +117,7 @@ public class Transformations {
         Matrix vectorHomogeneous = new Matrix(4, 1, vectorHomogeneousElements);
 
         Matrix result = LinearAlgebra.dot(rotationMatrix, vectorHomogeneous);
-        int[] resultCartesian = {(int) result.get(0, 0), (int) result.get(1, 0), (int) result.get(2, 0)};
+        double[] resultCartesian = {(int) result.get(0, 0), (int) result.get(1, 0), (int) result.get(2, 0)};
 
         return new Vector(3, resultCartesian);
     }
@@ -142,7 +142,7 @@ public class Transformations {
         Matrix vectorHomogeneous = new Matrix(4, 1, vectorHomogeneousElements);
 
         Matrix result = LinearAlgebra.dot(rotationMatrix, vectorHomogeneous);
-        int[] resultCartesian = {(int) result.get(0, 0), (int) result.get(1, 0), (int) result.get(2, 0)};
+        double[] resultCartesian = {(int) result.get(0, 0), (int) result.get(1, 0), (int) result.get(2, 0)};
 
         return new Vector(3, resultCartesian);
     }
@@ -167,7 +167,7 @@ public class Transformations {
         Matrix resultMatrix = LinearAlgebra.dot(reflectionMatrix, vectorMatrix);
 
         
-        return new Vector(2, new int[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0) });
+        return new Vector(2, new double[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0) });
     }
 
     public static Vector reflection2DY(Vector vector) {
@@ -186,7 +186,7 @@ public class Transformations {
         Matrix vectorMatrix = new Matrix(3, 1, vectorHomogeneousElements);
         
         Matrix resultMatrix = LinearAlgebra.dot(reflectionMatrix, vectorMatrix);
-        return new Vector(2, new int[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0) });
+        return new Vector(2, new double[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0) });
     }
 
    
@@ -207,7 +207,7 @@ public class Transformations {
         Matrix vectorMatrix = new Matrix(4, 1, vectorHomogeneousElements);
         
         Matrix resultMatrix = LinearAlgebra.dot(reflectionMatrix, vectorMatrix);
-        return new Vector(3, new int[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0), (int) resultMatrix.get(2, 0) });
+        return new Vector(3, new double[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0), (int) resultMatrix.get(2, 0) });
     }
 
     public static Vector reflection3DY(Vector vector) {
@@ -227,7 +227,7 @@ public class Transformations {
         Matrix vectorMatrix = new Matrix(4, 1, vectorHomogeneousElements);
         
         Matrix resultMatrix = LinearAlgebra.dot(reflectionMatrix, vectorMatrix);
-        return new Vector(3, new int[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0), (int) resultMatrix.get(2, 0) });
+        return new Vector(3, new double[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0), (int) resultMatrix.get(2, 0) });
     }
 
     public static Vector reflection3DZ(Vector vector) {
@@ -247,7 +247,7 @@ public class Transformations {
         Matrix vectorMatrix = new Matrix(4, 1, vectorHomogeneousElements);
         
         Matrix resultMatrix = LinearAlgebra.dot(reflectionMatrix, vectorMatrix);
-        return new Vector(3, new int[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0), (int) resultMatrix.get(2, 0) });
+        return new Vector(3, new double[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0), (int) resultMatrix.get(2, 0) });
     }
 
     public static Vector projection2DX(Vector vector) {
@@ -265,7 +265,7 @@ public class Transformations {
         Matrix vectorMatrix = new Matrix(3, 1, vectorHomogeneousElements);
         
         Matrix resultMatrix = LinearAlgebra.dot(projectionMatrix, vectorMatrix);
-        return new Vector(2, new int[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0) });
+        return new Vector(2, new double[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0) });
     }
 
     public static Vector projection2DY(Vector vector) {
@@ -283,7 +283,7 @@ public class Transformations {
         Matrix vectorMatrix = new Matrix(3, 1, vectorHomogeneousElements);
         
         Matrix resultMatrix = LinearAlgebra.dot(projectionMatrix, vectorMatrix);
-        return new Vector(2, new int[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0) });
+        return new Vector(2, new double[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0) });
     }
 
     
@@ -304,7 +304,7 @@ public class Transformations {
         Matrix vectorMatrix = new Matrix(4, 1, vectorHomogeneousElements);
         
         Matrix resultMatrix = LinearAlgebra.dot(projectionMatrix, vectorMatrix);
-        return new Vector(3, new int[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0), (int) resultMatrix.get(2, 0) });
+        return new Vector(3, new double[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0), (int) resultMatrix.get(2, 0) });
     }
 
     public static Vector projection3DY(Vector vector) {
@@ -324,7 +324,7 @@ public class Transformations {
         Matrix vectorMatrix = new Matrix(4, 1, vectorHomogeneousElements);
         
         Matrix resultMatrix = LinearAlgebra.dot(projectionMatrix, vectorMatrix);
-        return new Vector(3, new int[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0), (int) resultMatrix.get(2, 0) });
+        return new Vector(3, new double[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0), (int) resultMatrix.get(2, 0) });
     }
 
     public static Vector projection3DZ(Vector vector) {
@@ -344,7 +344,7 @@ public class Transformations {
         Matrix vectorMatrix = new Matrix(4, 1, vectorHomogeneousElements);
         
         Matrix resultMatrix = LinearAlgebra.dot(projectionMatrix, vectorMatrix);
-        return new Vector(3, new int[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0), (int) resultMatrix.get(2, 0) });
+        return new Vector(3, new double[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0), (int) resultMatrix.get(2, 0) });
     }
 
     public static Vector shearing(Vector vector, double kx, double ky) {
@@ -364,6 +364,6 @@ public class Transformations {
     
         Matrix resultMatrix = LinearAlgebra.dot(shearingMatrix, vectorMatrix);
     
-        return new Vector(2, new int[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0) });
+        return new Vector(2, new double[] { (int) resultMatrix.get(0, 0), (int) resultMatrix.get(1, 0) });
     }
 }

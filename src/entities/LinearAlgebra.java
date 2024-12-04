@@ -50,7 +50,7 @@ package entities;
                 System.out.println("Vetores de tamanhos diferentes: ");
             }
             int dimension = a.getDimension();
-            int [] result =  new int[dimension];
+            double [] result =  new double[dimension];
 
             for(int i = 0 ; i < dimension ; i++){
                 result[i] = a.get(i) + b.get(i);
@@ -81,7 +81,7 @@ package entities;
                 System.out.println("Vetores de tamanhos diferentes: ");
             }
             int dimension = a.getDimension();
-            int [] result =  new int[dimension];
+            double [] result =  new double[dimension];
 
             for(int i = 0 ; i < dimension ; i++){
                 result[i] = a.get(i) * b.get(i);
@@ -106,6 +106,36 @@ package entities;
                 }
             }
             return new Matrix(rows, columns, result);
+        }
+
+
+        public static Vector dot(Matrix matrix, Vector vector) {
+            int rows = matrix.getRows();
+            int cols = matrix.getColumns();
+            double[] result = new double[rows];
+    
+            for (int i = 0; i < rows; i++) {
+                double sum = 0.0;
+                for (int j = 0; j < cols; j++) {
+                    sum += matrix.get(i, j) * vector.get(j);  // Multiplicação da linha da matriz pelo vetor
+                }
+                result[i] = sum;
+            }
+            return new Vector(rows, result);
+        }
+
+        public static Vector transposeDot(Matrix matrix, Vector vector) {
+            int cols = matrix.getColumns();
+            double[] result = new double[cols];
+    
+            for (int i = 0; i < cols; i++) {
+                double sum = 0.0;
+                for (int j = 0; j < matrix.getRows(); j++) {
+                    sum += matrix.get(j, i) * vector.get(j);  // Multiplicação da transposta da matriz pelo vetor
+                }
+                result[i] = sum;
+            }
+            return new Vector(cols, result);
         }
 
         public static Matrix gauss(Matrix a){
